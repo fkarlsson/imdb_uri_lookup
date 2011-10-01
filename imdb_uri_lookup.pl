@@ -81,9 +81,9 @@ sub imdburi_get {
                 my $rating = '';
                 if ($json_data->{Rating} != 'N/A')
                 {
-                    $rating = ", $json_data->{Rating}";
+                    $rating = "- $json_data->{Rating} ";
                 }
-                $result_string = "$json_data->{Title} %K[%n$json_data->{Year}$rating%K]%n";
+                $result_string = "$json_data->{Title} $rating%K[%n$json_data->{Year}%K]%n";
             }
             default {
                 $result_string = 'Error';
