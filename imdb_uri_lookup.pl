@@ -29,7 +29,7 @@ $VERSION = '0.1';
 
 sub imdburi_public { 
     my ($server, $data, $nick, $mask, $target) = @_; 
-    my $retval = spotifyuri_get($data); 
+    my $retval = imdburi_get($data); 
     my $win = $server->window_item_find($target); 
     Irssi::signal_continue(@_);
 
@@ -41,7 +41,7 @@ sub imdburi_public {
 } 
 sub imdburi_private { 
     my ($server, $data, $nick, $mask) = @_; 
-    my $retval = spotifyuri_get($data); 
+    my $retval = imdburi_get($data); 
     my $win = Irssi::window_find_name('(msgs)'); 
     Irssi::signal_continue(@_);
 
