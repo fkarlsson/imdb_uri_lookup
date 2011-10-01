@@ -6,6 +6,7 @@
 # 
 # Changes 
 # 0.1 First version!
+# 1.0 First stable
 
 use strict; 
 use Irssi; 
@@ -16,7 +17,7 @@ use Irssi::Irc;
 use LWP::UserAgent; 
 use vars qw($VERSION %IRSSI);
 
-$VERSION = '0.1'; 
+$VERSION = '1.0'; 
 %IRSSI = ( 
     authors     => 'Fredrik Karlsson', 
     contact     => 'fkarlsson@gmail.com', 
