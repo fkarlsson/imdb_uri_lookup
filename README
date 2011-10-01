@@ -1,0 +1,9 @@
+IMDB URI Lookup Irssi Script - Special request by Mr D-Man!
+
+Parses IMDB URIs and uses an unofficial IMDB API (http://www.imdbapi.com/) to output the link info to the channel window.
+
+Also works in query windows, though you might get unexpected results if you are not using the "(msgs)" window for queries. Comments/improvments regarding this are more than welcome!
+
+Put the script in your Irssi scripts folder, run it and it just works. Tested in Perl 5.10.
+
+License blah blah: Do whatever you want with it, give credit to me if you think I deserve it. :)
