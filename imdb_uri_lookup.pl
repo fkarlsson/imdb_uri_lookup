@@ -1,12 +1,13 @@
 # 
-# Spotify Irssi plugin 
-# Decode and print information from Spotify URIs 
+# IMDb Irssi plugin 
+# Decode and print information from IMDb URIs 
 # 
 
 # 
 # Changes 
 # 0.1 First version!
 # 1.0 First stable
+# 1.1 LITET B
 
 use strict; 
 use Irssi; 
@@ -17,13 +18,13 @@ use Irssi::Irc;
 use LWP::UserAgent; 
 use vars qw($VERSION %IRSSI);
 
-$VERSION = '1.0'; 
+$VERSION = '1.1'; 
 %IRSSI = ( 
     authors     => 'Fredrik Karlsson', 
     contact     => 'fkarlsson@gmail.com', 
 
     name        => 'imdb_uri_lookup', 
-    description => 'Lookup IMDB URIs and output info to proper window.', 
+    description => 'Lookup IMDb URIs and output info to proper window.', 
     license     => '', 
     url         => '', 
 ); 
@@ -35,9 +36,9 @@ sub imdburi_public {
     Irssi::signal_continue(@_);
 
     if ($win) { 
-        $win->print("%_IMDB:%_ $retval", MSGLEVEL_CRAP) if $retval; 
+        $win->print("%_IMDb:%_ $retval", MSGLEVEL_CRAP) if $retval; 
     } else { 
-        Irssi::print("%_IMDB:%_ $retval") if $retval; 
+        Irssi::print("%_IMDb:%_ $retval") if $retval; 
     } 
 } 
 sub imdburi_private { 
@@ -47,9 +48,9 @@ sub imdburi_private {
     Irssi::signal_continue(@_);
 
     if ($win) { 
-        $win->print("%_IMDB:%_ $retval", MSGLEVEL_CRAP) if $retval; 
+        $win->print("%_IMDb:%_ $retval", MSGLEVEL_CRAP) if $retval; 
     } else { 
-        Irssi::print("%_IMDB:%_ $retval") if $retval; 
+        Irssi::print("%_IMDb:%_ $retval") if $retval; 
     } 
 } 
 sub imdburi_parse { 
